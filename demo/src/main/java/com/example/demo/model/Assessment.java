@@ -10,11 +10,14 @@ public class Assessment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+
     private String title;
     private String subject;
     private Integer maxScore;
     private String date;
+
+    // Links this assessment to the teacher who created it
+    private Long teacherId;
 
     // Getters and Setters
     public Long getId() { return id; }
@@ -27,4 +30,6 @@ public class Assessment {
     public void setMaxScore(Integer maxScore) { this.maxScore = maxScore; }
     public String getDate() { return date; }
     public void setDate(String date) { this.date = date; }
+    public Long getTeacherId() { return teacherId; }
+    public void setTeacherId(Long teacherId) { this.teacherId = teacherId; }
 }
